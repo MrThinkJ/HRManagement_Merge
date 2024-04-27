@@ -10,7 +10,7 @@ function checkNull(data, type, row){
       const data = response.data
       let counter = 0
       new DataTable(".table-1",{
-        scrollX:true,
+        scrollXInner:true,
         retrieve: true,
         data: data,
         columns: [

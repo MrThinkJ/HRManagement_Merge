@@ -1,0 +1,452 @@
+﻿<!DOCTYPE html>
+<!-- saved from url=(0039)http://localhost:19335/Personals/Create -->
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin</title>
+  <link type="text/css" href="../../assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link type="text/css" href="../assets/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
+  <link type="text/css" href="../assets/css/theme.css" rel="stylesheet">
+  <link type="text/css" href="../assets/images/icons/css/font-awesome.css" rel="stylesheet">
+  <link type="text/css" href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600'
+    rel='stylesheet'>
+
+
+
+
+  <style>
+    .centered-buttons {
+      text-align: end;
+      margin-right: 75px;
+      margin-bottom: 50px;
+    }
+    .control-group{
+      margin-bottom: 10px !important;
+    }
+  </style>
+
+
+
+</head>
+
+<body>
+  <div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-inverse-collapse">
+          <i class="icon-reorder shaded"></i>
+        </a><a class="brand" href="http://localhost:19335/">Admin </a>
+        <div class="nav-collapse collapse navbar-inverse-collapse">
+          <ul class="nav nav-icons">
+            <li class="active"><a href="http://localhost:19335/Personals/Create#"><i class="icon-envelope"></i></a></li>
+            <li><a href="http://localhost:19335/Personals/Create#"><i class="icon-eye-open"></i></a></li>
+            <li><a href="http://localhost:19335/Personals/Create#"><i class="icon-bar-chart"></i></a></li>
+          </ul>
+          <form class="navbar-search pull-left input-append" action="http://localhost:19335/Personals/Create#">
+            <input type="text" class="span3">
+            <button class="btn" type="button">
+              <i class="icon-search"></i>
+            </button>
+          </form>
+          <ul class="nav pull-right">
+            <li class="nav-user dropdown">
+              <a href="http://localhost:19335/Personals/Create#" class="dropdown-toggle" data-toggle="dropdown">
+                <img src="./Admin_files/user.png" class="nav-avatar">
+                <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="http://localhost:19335/Personals/Create#">Your Profile</a></li>
+                <li><a href="http://localhost:19335/Personals/Create#">Edit Profile</a></li>
+                <li><a href="http://localhost:19335/Personals/Create#">Account Settings</a></li>
+                <li class="divider"></li>
+                <li><a href="http://localhost:19335/Personals/Create#">Logout</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <!-- /.nav-collapse -->
+      </div>
+    </div>
+    <!-- /navbar-inner -->
+  </div>
+  <div class="wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="span3">
+          <div class="sidebar">
+            <ul class="widget widget-menu unstyled">
+              <li class="active">
+                <a href="index.html">
+                  <i class="menu-icon icon-dashboard"></i>Dashboard
+                </a>
+              </li>
+              <li>
+                <a href="../Personals/index.html"><i class="menu-icon icon-bullhorn"></i>Personal List </a>
+              </li>
+              <li>
+                <a href="http://localhost:19335/BenefitPlans">
+                  <i class="menu-icon icon-tasks"></i>Benefit Plans
+                </a>
+              </li>
+              <li>
+                <a href="http://localhost:19335/JobHistory">
+                  <i class="menu-icon icon-inbox"></i>Job History
+                </a>
+              </li>
+            </ul>
+            <ul class="widget widget-menu unstyled">
+              <li>
+                <a class="collapsed" data-toggle="collapse" href="http://localhost:19335/Personals/Create#togglePages">
+                  <i class="menu-icon icon-cog">
+                  </i><i class="icon-chevron-down pull-right"></i><i class="icon-chevron-up pull-right">
+                  </i>More Pages
+                </a>
+                <ul id="togglePages" class="collapse unstyled">
+                  <li><a href="http://localhost:19335/Personals/Create#"><i class="icon-inbox"></i>Login </a></li>
+                  <li><a href="http://localhost:19335/Personals/Create#"><i class="icon-inbox"></i>Profile </a></li>
+                  <li><a href="http://localhost:19335/Personals/Create#"><i class="icon-inbox"></i>All Users </a></li>
+                </ul>
+              </li>
+              <li><a href="http://localhost:19335/Personals/Create#"><i class="menu-icon icon-signout"></i>Logout </a>
+              </li>
+            </ul>
+          </div>
+          <!--/.sidebar-->
+        </div>
+        <!--/.span3-->
+        <div class="span9">
+
+          <div class="content">
+            <div class="module">
+              <div class="module-head">
+                <h3>Create Personal</h3>
+              </div>
+              <form action="" class="form-horizontal row-fluid" method="post">
+                <!-- Cái này là input gốc của thầy nhé a cần thì bỏ comment xài -->
+                <!-- <input name="__RequestVerificationToken" type="hidden"
+                  value="1T1FRQ7s3YJlwEX86JJwrv8cra3-7HXnN1UFz8VEQWaPBBYaboFg7eOYlfLFxKa1ngHlOILxZPeddkz8OZIZIezhkh9ZXxKLO8SA_uYdlTk1"> -->
+                <div class="module-body">
+                  <!-- Column1 -->
+                  <div class="span6">
+                    <div class="control-group">
+                      <label class="control-label" for="EmployeeID">Employee ID</label>
+                      <div class="controls">
+                        <input class="span9 text-box single-line" data-val="true"
+                          data-val-number="The field Employee_ID must be a number."
+                          data-val-required="The Employee_ID field is required." id="Employee_ID" name="Employee_ID"
+                          type="text" value="">
+                        <span class="field-validation-valid text-danger" data-valmsg-for="Employee_ID"
+                          data-valmsg-replace="true"></span>
+                      </div>
+                    </div>
+
+                    <div class="control-group">
+                      <label class="control-label" for="EmployeeID">First Name</label>
+                      <div class="controls">
+                        <input class="span9 text-box single-line" data-val="true"
+                          data-val-length="The field First_Name must be a string with a maximum length of 50."
+                          data-val-length-max="50" id="First_Name" name="First_Name" type="text" value="">
+                        <span class="field-validation-valid text-danger" data-valmsg-for="First_Name"
+                          data-valmsg-replace="true"></span>
+                      </div>
+                    </div>
+
+                    <div class="control-group">
+                      <label class="control-label col-md-2" for="Last_Name">Last Name</label>
+                      <div class="controls">
+                        <input class="span9 text-box single-line" data-val="true"
+                          data-val-length="The field Last_Name must be a string with a maximum length of 50."
+                          data-val-length-max="50" id="Last_Name" name="Last_Name" type="text" value="">
+                        <span class="field-validation-valid text-danger" data-valmsg-for="Last_Name"
+                          data-valmsg-replace="true"></span>
+                      </div>
+                    </div>
+
+                    <div class="control-group">
+                      <label class="control-label col-md-2" for="Middle_Initial">Middle Initial</label>
+                      <div class="controls">
+                        <input class="span9 text-box single-line" data-val="true"
+                          data-val-length="The field Middle_Initial must be a string with a maximum length of 50."
+                          data-val-length-max="50" id="Middle_Initial" name="Middle_Initial" type="text" value="">
+                        <span class="field-validation-valid text-danger" data-valmsg-for="Middle_Initial"
+                          data-valmsg-replace="true"></span>
+                      </div>
+                    </div>
+
+                    <div class="control-group">
+                      <label class="control-label col-md-2" for="Address1">Address1</label>
+                      <div class="controls">
+                        <input class="span9 text-box single-line" data-val="true"
+                          data-val-length="The field Address1 must be a string with a maximum length of 50."
+                          data-val-length-max="50" id="Address1" name="Address1" type="text" value="">
+                        <span class="field-validation-valid text-danger" data-valmsg-for="Address1"
+                          data-valmsg-replace="true"></span>
+                      </div>
+                    </div>
+
+                    <div class="control-group">
+                      <label class="control-label col-md-2" for="Address2">Address2</label>
+                      <div class="controls">
+                        <input class="span9 text-box single-line" data-val="true"
+                          data-val-length="The field Address2 must be a string with a maximum length of 50."
+                          data-val-length-max="50" id="Address2" name="Address2" type="text" value="">
+                        <span class="field-validation-valid text-danger" data-valmsg-for="Address2"
+                          data-valmsg-replace="true"></span>
+                      </div>
+                    </div>
+
+                    <div class="control-group">
+                      <label class="control-label col-md-2" for="City">City</label>
+                      <div class="controls">
+                        <input class="span9 text-box single-line" data-val="true"
+                          data-val-length="The field City must be a string with a maximum length of 50."
+                          data-val-length-max="50" id="City" name="City" type="text" value="">
+                        <span class="field-validation-valid text-danger" data-valmsg-for="City"
+                          data-valmsg-replace="true"></span>
+                      </div>
+                    </div>
+
+                    <div class="control-group">
+                      <label class="control-label col-md-2" for="State">State</label>
+                      <div class="controls">
+                        <input class="span9 text-box single-line" data-val="true"
+                          data-val-length="The field State must be a string with a maximum length of 50."
+                          data-val-length-max="50" id="State" name="State" type="text" value="">
+                        <span class="field-validation-valid text-danger" data-valmsg-for="State"
+                          data-valmsg-replace="true"></span>
+                      </div>
+                    </div>
+
+                    <div class="control-group">
+                      <label class="control-label col-md-2" for="Zip">Zip</label>
+                      <div class="controls">
+                        <input class="span9 text-box single-line" data-val="true"
+                          data-val-number="The field Zip must be a number." id="Zip" name="Zip" type="text" value="">
+                        <span class="field-validation-valid text-danger" data-valmsg-for="Zip"
+                          data-valmsg-replace="true"></span>
+                      </div>
+                    </div>
+
+                    <div class="control-group">
+                      <label class="control-label col-md-2" for="Email">Email</label>
+                      <div class="controls">
+                        <input class="span9 text-box single-line" data-val="true"
+                          data-val-length="The field Email must be a string with a maximum length of 50."
+                          data-val-length-max="50" id="Email" name="Email" type="text" value="">
+                        <span class="field-validation-valid text-danger" data-valmsg-for="Email"
+                          data-valmsg-replace="true"></span>
+                      </div>
+                    </div>
+
+                    <div class="control-group">
+                      <label class="control-label col-md-2" for="Phone_Number">Phone Number</label>
+                      <div class="controls">
+                        <input class="span9 text-box single-line" data-val="true"
+                          data-val-length="The field Phone_Number must be a string with a maximum length of 50."
+                          data-val-length-max="50" id="Phone_Number" name="Phone_Number" type="text" value="">
+                        <span class="field-validation-valid text-danger" data-valmsg-for="Phone_Number"
+                          data-valmsg-replace="true"></span>
+                      </div>
+                    </div>
+
+                    <div class="control-group">
+                      <label class="control-label col-md-2" for="Social_Security_Number">Social Security Number</label>
+                      <div class="controls">
+                        <input class="span9 text-box single-line" data-val="true"
+                          data-val-length="The field Social_Security_Number must be a string with a maximum length of 50."
+                          data-val-length-max="50" id="Social_Security_Number" name="Social_Security_Number" type="text"
+                          value="">
+                        <span class="field-validation-valid text-danger" data-valmsg-for="Social_Security_Number"
+                          data-valmsg-replace="true"></span>
+                      </div>
+                    </div>
+
+                    <div class="control-group">
+                      <label class="control-label col-md-2" for="Drivers_License">Drivers License</label>
+                      <div class="controls">
+                        <input class="span9 text-box single-line" data-val="true"
+                          data-val-length="The field Drivers_License must be a string with a maximum length of 50."
+                          data-val-length-max="50" id="Drivers_License" name="Drivers_License" type="text" value="">
+                        <span class="field-validation-valid text-danger" data-valmsg-for="Drivers_License"
+                          data-valmsg-replace="true"></span>
+                      </div>
+                    </div>
+
+                  </div>
+                  <!-- Column2 -->
+                  <div class="span6">
+                    <div class="control-group">
+                      <label class="control-label col-md-2" for="Marital_Status">Marital Status</label>
+                      <div class="controls">
+                        <input class="span9 text-box single-line" data-val="true"
+                          data-val-length="The field Marital_Status must be a string with a maximum length of 50."
+                          data-val-length-max="50" id="Marital_Status" name="Marital_Status" type="text" value="">
+                        <span class="field-validation-valid text-danger" data-valmsg-for="Marital_Status"
+                          data-valmsg-replace="true"></span>
+                      </div>
+                    </div>
+
+                    <div class="control-group">
+                      <label class="control-label col-md-2" for="Gender">Gender</label>
+                      <div class="controls">
+                        <select id="Gender" name="Gender">
+                          <option value="True">Male</option>
+                          <option value="False">Female</option>
+                        </select>
+                        <span class="field-validation-valid text-danger" data-valmsg-for="Gender"
+                          data-valmsg-replace="true"></span>
+                      </div>
+                    </div>
+
+                    <div class="control-group">
+                      <label class="control-label col-md-2" for="Shareholder_Status">Shareholder Status</label>
+                      <div class="controls">
+                        <input class="check-box" data-val="true"
+                          data-val-required="The Shareholder_Status field is required." id="Shareholder_Status"
+                          name="Shareholder_Status" type="checkbox" value="true"><input name="Shareholder_Status"
+                          type="hidden" value="false">
+                        <span class="field-validation-valid text-danger" data-valmsg-for="Shareholder_Status"
+                          data-valmsg-replace="true"></span>
+                      </div>
+                    </div>
+
+                    <div class="control-group">
+                      <label class="control-label col-md-2" for="Benefit_Plans">Benefit Plans</label>
+                      <div class="controls">
+                        <select class="span9" id="Benefit_Plans" name="Benefit_Plans"></select>
+                        <span class="field-validation-valid text-danger" data-valmsg-for="Benefit_Plans"
+                          data-valmsg-replace="true"></span>
+                      </div>
+                    </div>
+
+                    <div class="control-group">
+                      <label class="control-label col-md-2" for="Ethnicity">Ethnicity</label>
+                      <div class="controls">
+                        <input class="span9 text-box single-line" data-val="true"
+                          data-val-length="The field Ethnicity must be a string with a maximum length of 50."
+                          data-val-length-max="50" id="Ethnicity" name="Ethnicity" type="text" value="">
+                        <span class="field-validation-valid text-danger" data-valmsg-for="Ethnicity"
+                          data-valmsg-replace="true"></span>
+                      </div>
+                    </div>
+                    <div class="control-group">
+                      <label class="control-label col-md-2" for="VacationDays">Vacation Days</label>
+                      <div class="controls">
+                        <input class="span9 text-box single-line datepicker" data-val="true"
+                          data-val-length="The field Vacation Days must be a string with a maximum length of 50."
+                          data-val-length-max="50" id="VacationDays" name="VacationDays" type="text" value="">
+                        <span class="field-validation-valid text-danger" data-valmsg-for="VacationDays"
+                          data-valmsg-replace="true"></span>
+                      </div>
+                    </div>
+
+                    <div class="control-group">
+                      <label class="control-label col-md-2" for="PaidToDate">Paid To Date</label>
+                      <div class="controls">
+                        <input class="span9 text-box single-line datepicker" data-val="true"
+                          data-val-length="The field Paid To Date must be a string with a maximum length of 50."
+                          data-val-length-max="50" id="PaidToDate" name="PaidToDate" type="text" value="">
+                        <span class="field-validation-valid text-danger" data-valmsg-for="PaidToDate"
+                          data-valmsg-replace="true"></span>
+                      </div>
+                    </div>
+
+                    <div class="control-group">
+                      <label class="control-label col-md-2" for="PaidLastYear">Paid Last Year</label>
+                      <div class="controls">
+                        <input class="span9 text-box single-line datepicker" data-val="true"
+                          data-val-length="The field Paid Last Year must be a string with a maximum length of 50."
+                          data-val-length-max="50" id="PaidLastYear" name="PaidLastYear" type="text" value="">
+                        <span class="field-validation-valid text-danger" data-valmsg-for="PaidLastYear"
+                          data-valmsg-replace="true"></span>
+                      </div>
+                    </div>
+
+                    <div class="control-group">
+                      <label class="control-label col-md-2" for="PayRate">Pay Rate</label>
+                      <div class="controls">
+                        <input class="span9 text-box single-line datepicker" data-val="true"
+                          data-val-length="The field Pay Rate must be a string with a maximum length of 50."
+                          data-val-length-max="50" id="PayRate" name="PayRate" type="text" value="">
+                        <span class="field-validation-valid text-danger" data-valmsg-for="PayRate"
+                          data-valmsg-replace="true"></span>
+                      </div>
+                    </div>
+
+                    <div class="control-group">
+                      <label class="control-label col-md-2" for="PayRateID">Pay Rate ID</label>
+                      <div class="controls">
+                        <input class="span9 text-box single-line datepicker" data-val="true"
+                          data-val-length="The field Pay Rate ID must be a string with a maximum length of 50."
+                          data-val-length-max="50" id="PayRateID" name="PayRateID" type="text" value="">
+                        <span class="field-validation-valid text-danger" data-valmsg-for="PayRateID"
+                          data-valmsg-replace="true"></span>
+                      </div>
+                    </div>
+
+                    <div class="control-group">
+                      <label class="control-label col-md-2" for="CreatedAt">Created At</label>
+                      <div class="controls">
+                        <input class="span9 text-box single-line datepicker" data-val="true"
+                          data-val-length="The field Created At must be a string with a maximum length of 50."
+                          data-val-length-max="50" id="CreatedAt" name="CreatedAt" type="text" value="">
+                        <span class="field-validation-valid text-danger" data-valmsg-for="CreatedAt"
+                          data-valmsg-replace="true"></span>
+                      </div>
+                    </div>
+
+                    <div class="control-group">
+                      <label class="control-label col-md-2" for="UpdatedAt">Updated At</label>
+                      <div class="controls">
+                        <input class="span9 text-box single-line datepicker" data-val="true"
+                          data-val-length="The field Updated At must be a string with a maximum length of 50."
+                          data-val-length-max="50" id="UpdatedAt" name="UpdatedAt" type="text" value="">
+                        <span class="field-validation-valid text-danger" data-valmsg-for="UpdatedAt"
+                          data-valmsg-replace="true"></span>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+                <!-- Button -->
+                <div class="control-group centered-buttons">
+                  <div class="col-md-offset-2 controls">
+                    <input type="submit" value="Create" class="btn btn-default">
+                    <a class="btn btn-default" href="./index.html">Back to List</a>
+                  </div>
+                </div>
+
+              </form>
+            </div>
+          </div><!--/.content-->
+          <!--/.content-->
+        </div>
+        <!--/.span9-->
+      </div>
+    </div>
+    <!--/.container-->
+  </div>
+  <div class="footer">
+    <div class="container">
+      <b class="copyright">© 2014 Admin - DaoNguyen </b>All rights reserved.
+    </div>
+  </div>
+  <!-- <script src="./Admin_files/jquery-1.9.1.min.js.tải xuống" type="text/javascript"></script>
+  <script src="./Admin_files/jquery-ui-1.10.1.custom.min.js.tải xuống" type="text/javascript"></script>
+  <script src="./Admin_files/bootstrap.min.js.tải xuống" type="text/javascript"></script>
+  <script src="./Admin_files/jquery.flot.js.tải xuống" type="text/javascript"></script>
+  <script src="./Admin_files/jquery.flot.resize.js.tải xuống" type="text/javascript"></script>
+  <script src="./Admin_files/jquery.dataTables.js.tải xuống" type="text/javascript"></script>
+  <script src="./Admin_files/common.js.tải xuống" type="text/javascript"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="../App/CRUD.js"></script>
+
+</body>
+
+
+</html>

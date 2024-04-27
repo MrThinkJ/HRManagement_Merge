@@ -9,8 +9,8 @@ function checkNull(data, type, row){
     .then(function (response) {
       const data = response.data
       let counter = 0
-      new DataTable(".table-1",{
-        scrollX:true,
+      $(".table-1").DataTable({
+        scrollXInner:true,
         retrieve: true,
         data: data,
         columns: [
@@ -42,34 +42,31 @@ function checkNull(data, type, row){
             {data: 'createdAt', render: checkNull},
             {data: 'updatedAt', render: checkNull},
             { 'data': null, "render": function (data) {
-              const firstName = data.firstName
-              const lastName = data.lastName
-              const func = `onclick="deleteEmployee('${firstName}','${lastName}')"`
-              return `<div class='btn-group'> <button type='button' onclick=location.href='./Edit.html' class='btn btn-success'>Edit</button><button type='button' ${func} class='btn btn-danger btn-delete'>Delete</button></div>` }},
+              return `<div class='btn-group'> <button type='button' onclick=location.href='./Edit.html' class='btn btn-success'>Edit</button><button type='button' onClick=${data} class='btn btn-danger btn-delete'>Delete</button></div>` }},
           ],
         searching: true,
         "bDestroy": true,
       });
+      $(document).on("click", "btn-delete", function(){
+        const firstName = $(this).attr("firstName")
+        const lastName = $(this).attr("lastName")
+        alert(firstName)
+        axios.delete(`http://localhost:8080/api`,
+          {"firstName": firstName,
+            "lastname": lastName})
+            .then(response =>{
+              console.log(response);
+              alert(`Delete employee ${firstName}${lastName} successfully`);
+            })
+            .catch(error=>{
+              console.log(error);
+              alert(`Delete employee ${firstName}${lastName} error`);
+            })
+      })
     })
     .catch(function (error) {
       console.log(error);
     });
-
-function deleteEmployee(firstName, lastName){
-  payload = {
-    "firstName": firstName,
-    "lastName": lastName
-  }
-  console.log(payload)
-  axios.delete(`http://localhost:8080/api/delete`,
-    {data:payload})
-      .then(response =>{
-        alert(`Delete employee ${firstName}${lastName} `+response)
-      })
-      .catch(error=>{
-        alert(`Delete employee ${firstName}${lastName} error`);
-      })
-}
 
 function connect(event) {
   var socket = new SockJS('http://127.0.0.1:8080/ws');
@@ -119,11 +116,7 @@ function onMessageReceived(payload) {
         {data: 'payRateId', render: checkNull},
         {data: 'createdAt', render: checkNull},
         {data: 'updatedAt', render: checkNull},
-        { 'data': null, "render": function (data) {
-          const firstName = data.firstName
-          const lastName = data.lastName
-          const func = `onclick="deleteEmployee('${firstName}','${lastName}')"`
-          return `<div class='btn-group'> <button type='button' onclick=location.href='./Edit.html' class='btn btn-success'>Edit</button><button type='button' ${func} class='btn btn-danger btn-delete'>Delete</button></div>` }},
+        { 'data': null, title: 'Action', wrap: true, "render": function (item) { return '<div class="btn-group"> <button type="button" onclick="set_value(' + item.ID + ')" value="0" class="btn btn-warning" data-toggle="modal" data-target="#myModal">View</button></div>' } },
       ],
       searching: true,
       "bDestroy": true

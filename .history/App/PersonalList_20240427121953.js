@@ -10,7 +10,7 @@ function checkNull(data, type, row){
       const data = response.data
       let counter = 0
       new DataTable(".table-1",{
-        scrollX:true,
+        scrollXInner:true,
         retrieve: true,
         data: data,
         columns: [
@@ -64,9 +64,11 @@ function deleteEmployee(firstName, lastName){
   axios.delete(`http://localhost:8080/api/delete`,
     {data:payload})
       .then(response =>{
-        alert(`Delete employee ${firstName}${lastName} `+response)
+        alert(`Delete employee ${firstName}${lastName} successfully`);
+        alert(response)
       })
       .catch(error=>{
+        console.log(error);
         alert(`Delete employee ${firstName}${lastName} error`);
       })
 }

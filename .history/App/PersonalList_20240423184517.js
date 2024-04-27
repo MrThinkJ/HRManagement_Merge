@@ -5,12 +5,13 @@ function checkNull(data, type, row){
 
 }
 
+
+
   axios.get('http://localhost:8080/api/merge/employee')
     .then(function (response) {
       const data = response.data
       let counter = 0
-      new DataTable(".table-1",{
-        scrollX:true,
+      $('.table-1').DataTable({
         retrieve: true,
         data: data,
         columns: [
@@ -40,12 +41,7 @@ function checkNull(data, type, row){
             { data: 'payRate', render: checkNull},
             {data: 'payRateId', render: checkNull},
             {data: 'createdAt', render: checkNull},
-            {data: 'updatedAt', render: checkNull},
-            { 'data': null, "render": function (data) {
-              const firstName = data.firstName
-              const lastName = data.lastName
-              const func = `onclick="deleteEmployee('${firstName}','${lastName}')"`
-              return `<div class='btn-group'> <button type='button' onclick=location.href='./Edit.html' class='btn btn-success'>Edit</button><button type='button' ${func} class='btn btn-danger btn-delete'>Delete</button></div>` }},
+            {data: 'updatedAt', render: checkNull}
           ],
         searching: true,
         "bDestroy": true,
@@ -54,22 +50,6 @@ function checkNull(data, type, row){
     .catch(function (error) {
       console.log(error);
     });
-
-function deleteEmployee(firstName, lastName){
-  payload = {
-    "firstName": firstName,
-    "lastName": lastName
-  }
-  console.log(payload)
-  axios.delete(`http://localhost:8080/api/delete`,
-    {data:payload})
-      .then(response =>{
-        alert(`Delete employee ${firstName}${lastName} `+response)
-      })
-      .catch(error=>{
-        alert(`Delete employee ${firstName}${lastName} error`);
-      })
-}
 
 function connect(event) {
   var socket = new SockJS('http://127.0.0.1:8080/ws');
@@ -118,14 +98,10 @@ function onMessageReceived(payload) {
         { data: 'payRate', render: checkNull},
         {data: 'payRateId', render: checkNull},
         {data: 'createdAt', render: checkNull},
-        {data: 'updatedAt', render: checkNull},
-        { 'data': null, "render": function (data) {
-          const firstName = data.firstName
-          const lastName = data.lastName
-          const func = `onclick="deleteEmployee('${firstName}','${lastName}')"`
-          return `<div class='btn-group'> <button type='button' onclick=location.href='./Edit.html' class='btn btn-success'>Edit</button><button type='button' ${func} class='btn btn-danger btn-delete'>Delete</button></div>` }},
+        {data: 'updatedAt', render: checkNull}
       ],
       searching: true,
+      scrollX: true,
       "bDestroy": true
   });
 }
